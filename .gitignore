@@ -48,6 +48,9 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# Directory for results pulled from HPC that I want on local machine but not github
+local_results/
+
 # Large genomic data files
 **/*.bam
 **/*.bai
