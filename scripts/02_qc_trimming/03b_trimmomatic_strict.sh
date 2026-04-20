@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH --job-name=fp_trimmomatic
+#SBATCH --job-name=fp_trimmomatic_strict
 #SBATCH --mail-user=vzu25002@uconn.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o logs/%x_%j.out
@@ -38,10 +38,4 @@ java -jar ${Trimmomatic} PE -threads 4 \
     ${OUTDIR}/${SAMPLE}_1.trimmed.fastq.gz ${OUTDIR}/${SAMPLE}_1.unpaired.fastq.gz \
     ${OUTDIR}/${SAMPLE}_2.trimmed.fastq.gz ${OUTDIR}/${SAMPLE}_2.unpaired.fastq.gz \
     ILLUMINACLIP:${ADAPTERS}:2:30:10 \
-    SLIDINGWINDOW:4:15 MINLEN:50
-
-
-
-
-
-
+    SLIDINGWINDOW:4:25 MINLEN:50

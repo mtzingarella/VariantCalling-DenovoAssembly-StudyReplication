@@ -2,8 +2,8 @@
 #SBATCH --job-name=fp_getSRA
 #SBATCH --mail-user=vzu25002@uconn.edu
 #SBATCH --mail-type=ALL
-#SBATCH -o %x_%j.out
-#SBATCH -e %x_%j.err
+#SBATCH -o logs/%x_%j.out
+#SBATCH -e logs/%x_%j.err
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=10G

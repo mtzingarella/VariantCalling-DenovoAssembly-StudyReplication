@@ -24,4 +24,3 @@ module load MultiQC/1.15
 
 # Run multiqc on all fastqc reports in the INDIR
 multiqc -f -o $OUTDIR $INDIR
-

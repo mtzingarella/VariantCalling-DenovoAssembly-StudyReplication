@@ -27,4 +27,3 @@ module load fastqc/0.12.1
 fastqc $INDIR/*.trimmed.fastq.gz -o $OUTDIR -t 3
 
 
-

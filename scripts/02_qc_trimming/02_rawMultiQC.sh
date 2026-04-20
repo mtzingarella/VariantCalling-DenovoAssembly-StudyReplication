@@ -1,5 +1,5 @@
 #!/bin/bash 
-#SBATCH --job-name=fp_rawQC
+#SBATCH --job-name=fp_rawmultiQC
 #SBATCH --mail-user=vzu25002@uconn.edu
 #SBATCH --mail-type=ALL
 #SBATCH -o logs/%x_%j.out
@@ -15,16 +15,11 @@
 hostname
 date
 
-
-RAWDATADIR=../../data/raw/fastq
-OUTDIR=../../results/02_qc_trimming/raw_fastqc
+INDIR=../../results/02_qc_trimming/raw_fastqc
+OUTDIR=../../results/02_qc_trimming/multiqc/raw
 mkdir -p $OUTDIR
 
-module load fastqc/0.12.1
+module load MultiQC/1.15
 
-
-# Run fastqc on all .fastq.gz files in the RAWDATADIR
-
-fastqc $RAWDATADIR/*.fastq.gz -o $OUTDIR -t 3
-
-
+# Run multiqc on all fastqc reports in the INDIR
+multiqc -f -o $OUTDIR $INDIR
