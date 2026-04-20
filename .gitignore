@@ -51,3 +51,5 @@ rsconnect/
 # Data, other
 
 data/trimmed_strict/*
+*.fastq.gz
+*.fastq
