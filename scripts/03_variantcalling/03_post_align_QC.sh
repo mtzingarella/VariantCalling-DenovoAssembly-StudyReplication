@@ -18,9 +18,10 @@ date
 
 # Load QC Software
 
-module load samtools/1.16.1
 module load MultiQC/1.15
 module load parallel/20180122
+module load samtools/1.16.1
+module unload openssl
 
 
 
@@ -78,11 +79,11 @@ module load samtools/1.16.1
 COVERAGE_OUT=$OUT_DIR/coverage
 mkdir -p $COVERAGE_OUT
 
-GENOME=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna.gz
+GENOME=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
 
 # create faidx genome index file
 samtools faidx ${GENOME}
-FAI=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna.gz.fai #created by previous command
+FAI=${GENOME}.fai #created by previous command
 
 # make a "genome" file, required by bedtools makewindows command, set variable for location
 GFILE=${COVERAGE_OUT}/GCF_000750555.genome 
