@@ -18,10 +18,8 @@ date
 
 # Load QC Software
 
-module load MultiQC/1.15
 module load parallel/20180122
 module load samtools/1.16.1
-module unload openssl
 
 
 
@@ -64,6 +62,8 @@ cat \
     mv $SAMSTATS_OUT/SN2.txt $SAMSTATS_OUT/SN.txt
 
 # run multiqc on samstats output
+module purge
+module load MultiQC/1.15
 multiqc -f -o $SAMSTATS_OUT/multiqc $SAMSTATS_OUT
 
 
