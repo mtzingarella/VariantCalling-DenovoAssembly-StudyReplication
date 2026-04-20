@@ -1,0 +1,9 @@
+
+  /// MultiQC 🔍 | v1.15
+
+|           multiqc | Search path : /home/FCAM/mzingarella/isg5312/gitrepos/VariantCalling-DenovoAssembly-StudyReplication/results/02_qc_trimming/04_trimmed_fastqc
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 32/32  
+|            fastqc | Found 16 reports
+|           multiqc | Report      : ../../results/02_qc_trimming/multiqc/trimmed/multiqc_report.html
+|           multiqc | Data        : ../../results/02_qc_trimming/multiqc/trimmed/multiqc_data
+|           multiqc | MultiQC complete
