@@ -48,6 +48,32 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# Large genomic data files
+**/*.bam
+**/*.bai
+**/*.sam
+**/*.cram
+**/*.crai
+**/*.fastq
+**/*.fastq.gz
+**/*.fq
+**/*.fq.gz
+**/*.vcf
+**/*.vcf.gz
+**/*.bcf
+**/*.bcf.gz
+**/*.fna
+**/*.fna.gz
+**/*.fa
+**/*.fa.gz
+**/*.fasta
+**/*.fasta.gz
+**/*.tbi
+**/*.bed
+**/*.bigwig
+**/*.bw
+**/*.bedgraph
+
 # Data, other
 
 data/trimmed_strict/*
