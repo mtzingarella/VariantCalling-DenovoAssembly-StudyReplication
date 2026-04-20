@@ -21,8 +21,7 @@ date
 module load samtools/1.16.1
 module load MultiQC/1.15
 module load parallel/20180122
-module load bedtools/2.29.0
-module load bamtools/2.5.1
+
 
 
 ALIGN_DIR=../../results//03_variantcalling/02_align_reads
@@ -70,6 +69,11 @@ multiqc -f -o $SAMSTATS_OUT/multiqc $SAMSTATS_OUT
 #===========================================================================
 #=========== QC 2: COVERAGE ANALYSIS =======================================
 #===========================================================================
+#Purging modules between steps because some cause conflicts
+module purge
+module load bedtools/2.29.0
+module load bamtools/2.5.1
+module load samtools/1.16.1
 
 COVERAGE_OUT=$OUT_DIR/coverage
 mkdir -p $COVERAGE_OUT
