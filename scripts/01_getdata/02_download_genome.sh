@@ -35,3 +35,5 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/750/555/GCF_000750555.1_AS
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/750/555/GCF_000750555.1_ASM75055v1/GCF_000750555.1_ASM75055v1_genomic.gff.gz
 
 
+zcat $OUTDIR/GCF_000750555.1_ASM75055v1_genomic.fna.gz > $OUTDIR/GCF_000750555.1_ASM75055v1_genomic.fna
+zcat $OUTDIR/GCF_000750555.1_ASM75055v1_genomic.gff.gz > $OUTDIR/GCF_000750555.1_ASM75055v1_genomic.gff
