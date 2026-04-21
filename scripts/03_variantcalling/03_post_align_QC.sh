@@ -68,7 +68,7 @@ multiqc -f -o $SAMSTATS_OUT/multiqc $SAMSTATS_OUT
 
 
 #===========================================================================
-#=========== QC 2: COVERAGE ANALYSIS =======================================
+#=========== QC 2: COVERAGE ANALYSIS 0.1KB WINDOW===========================
 #===========================================================================
 #Purging modules between steps because some cause conflicts
 module purge
@@ -107,6 +107,26 @@ bedtools map \
 -c 4 -o mean,median,count \
 -g $GFILE | \
 bgzip > $COVERAGE_OUT/coverage_0.1kb.bed.gz
+
+
+#===========================================================================
+#=========== QC 2: COVERAGE ANALYSIS 1KB WINDOW=============================
+#===========================================================================
+
+WINDOW_1KB=${COVERAGE_OUT}/GCF_000750555.1kb.windows.bed 
+bedtools makewindows -g $GFILE -w 1000 > $WINDOW_1KB
+
+bamtools merge -list $COVERAGE_OUT/bam.list | \
+bamtools filter -in - -mapQuality ">30" -isDuplicate false -isProperPair true | \
+samtools depth -a /dev/stdin | \
+awk '{OFS="\t"}{print $1,$2-1,$2,$3'} | \
+bedtools map \
+-a $WINDOW_1KB \
+-b stdin \
+-c 4 -o mean,median,count \
+-g $GFILE | \
+bgzip > $COVERAGE_OUT/coverage_1kb.bed.gz
+
 
 
 
