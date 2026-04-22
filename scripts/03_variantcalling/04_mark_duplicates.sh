@@ -54,4 +54,5 @@ gatk MarkDuplicates \
 
 # index the output BAM
 gatk BuildBamIndex \
-    -I $RESULTS_DIR/${SAMPLE}.markdup.bam
+    -I $RESULTS_DIR/${SAMPLE}.markdup.bam \
+    -O $RESULTS_DIR/${SAMPLE}.markdup.bai
