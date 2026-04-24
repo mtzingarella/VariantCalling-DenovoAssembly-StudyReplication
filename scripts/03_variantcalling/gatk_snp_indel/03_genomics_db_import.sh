@@ -19,14 +19,14 @@ date
 module load GATK/4.3.0.0
 
 # set directories
-GVCF_DIR=../../results/03_variantcalling/05_haplotype_caller
-RESULTS_DIR=../../results/03_variantcalling/06_genomics_db_import
+GVCF_DIR=../../../results/03_variantcalling/gatk_snp_indel/02_haplotype_caller
+RESULTS_DIR=../../../results/03_variantcalling/gatk_snp_indel/03_genomics_db_import
 mkdir -p $RESULTS_DIR
 
-GENOME=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
+GENOME=../../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
 FAI=${GENOME}.fai
 
-TMP=../../data/tmp
+TMP=../../../data/tmp
 mkdir -p $TMP
 
 # resolve GVCF directory to an absolute path, required by GenomicsDBImport

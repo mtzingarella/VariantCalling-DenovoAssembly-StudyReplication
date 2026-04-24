@@ -19,13 +19,13 @@ date
 module load GATK/4.3.0.0
 
 # set directories
-GDB_DIR=../../results/03_variantcalling/06_genomics_db_import
-RESULTS_DIR=../../results/03_variantcalling/07_genotype_gvcfs
+GDB_DIR=../../../results/03_variantcalling/gatk_snp_indel/03_genomics_db_import
+RESULTS_DIR=../../../results/03_variantcalling/gatk_snp_indel/04_genotype_gvcfs
 mkdir -p $RESULTS_DIR
 
-GENOME=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
+GENOME=../../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
 
-TMP=../../data/tmp
+TMP=../../../data/tmp
 mkdir -p $TMP
 
 # resolve GenomicsDB path to absolute (gendb:// requires an absolute path)

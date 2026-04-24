@@ -24,14 +24,14 @@ date
 module load GATK/4.3.0.0
 
 # set directories
-ALIGN_DIR=../../results/03_variantcalling/02_align_reads
-RESULTS_DIR=../../results/03_variantcalling/04_mark_duplicates
+ALIGN_DIR=../../../results/03_variantcalling/02_align_reads
+RESULTS_DIR=../../../results/03_variantcalling/gatk_snp_indel/01_mark_duplicates
 mkdir -p $RESULTS_DIR
 
-GENOME=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
+GENOME=../../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
 DICT=${GENOME%.fna}.dict
 
-TMP=../../data/tmp
+TMP=../../../data/tmp
 mkdir -p $TMP
 
 # create the sequence dictionary if it does not already exist

@@ -20,13 +20,13 @@ date
 module load GATK/4.3.0.0
 
 # set directories
-MARKDUP_DIR=../../results/03_variantcalling/04_mark_duplicates
-RESULTS_DIR=../../results/03_variantcalling/05_haplotype_caller
+MARKDUP_DIR=../../../results/03_variantcalling/gatk_snp_indel/01_mark_duplicates
+RESULTS_DIR=../../../results/03_variantcalling/gatk_snp_indel/02_haplotype_caller
 mkdir -p $RESULTS_DIR
 
-GENOME=../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
+GENOME=../../../data/genome/GCF_000750555.1_ASM75055v1_genomic.fna
 
-TMP=../../data/tmp
+TMP=../../../data/tmp
 mkdir -p $TMP
 
 # sample ID list
