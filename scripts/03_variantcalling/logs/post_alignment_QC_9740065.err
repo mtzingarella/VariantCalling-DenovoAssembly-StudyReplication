@@ -1,0 +1,9 @@
+
+  /// MultiQC 🔍 | v1.15
+
+|           multiqc | Search path : /home/FCAM/mzingarella/isg5312/gitrepos/VariantCalling-DenovoAssembly-StudyReplication/results/03_variantcalling/03_post_align_QC/samstats
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 9/9  
+|          samtools | Found 8 stats reports
+|           multiqc | Report      : ../../results/03_variantcalling/03_post_align_QC/samstats/multiqc/multiqc_report.html
+|           multiqc | Data        : ../../results/03_variantcalling/03_post_align_QC/samstats/multiqc/multiqc_data
+|           multiqc | MultiQC complete
